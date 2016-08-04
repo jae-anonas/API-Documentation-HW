@@ -7,6 +7,9 @@ https://api.instagram.com/v1/media/search?lat=40.7128&lng=-74.0059&access_token=
 key/value pairs: none, except for the access_token; we need the media-id but not as a key/value pair
 JSON response: consists of an object with a member array ("data") whose elements are objects containing some info about
   users who liked the media; so the answer is 1, just the root
+  
+ALSO: by using Media Endpoints(the above uses Like Endpoints), we need no key/value pairs, and to get the number 
+  of likes, we need to traverse the root->data->likes objects to see the "count" key/member; so 3 is the answer.
 
 3. Pretend you've sorted the photos by how many "likes" they received. Now, you want to get a list of users that liked the top photo in your list. What URL would you use for an API call to get a list of users who liked a specific photo?
 
